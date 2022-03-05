@@ -1,0 +1,164 @@
+.main-ayuda {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url("../../img/bkg/fondo-altas.jpg");
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+
+  height: 100%;
+  width: 100%;
+
+  color: $color-light-low;
+}
+
+.ayuda-container {
+  background-color: $color-dark-hig-transparent;
+  min-width: 250px;
+  max-width: 900px;
+  width: 80%;
+  padding: 50px 30px;
+  border-radius: 2em;
+
+  &__link {
+    color: $color-light-low;
+    text-decoration: none;
+
+    &:hover,
+    &:focus,
+    &:active {
+      text-decoration: none;
+      text-decoration: underline;
+      color: inherit;
+    }
+  }
+
+  &__tittle {
+    color: $color-light-mid;
+    text-align: center;
+    font-size: 2em;
+    padding: 1em;
+  }
+
+  &__parrafo {
+    margin-bottom: 0.8em;
+    text-indent: 2em;
+  }
+
+  &__titulos {
+    margin: 1em 0;
+    color: $color-light-mid;
+    font-weight: bold;
+
+    & ul li {
+      margin-left: 2em;
+    }
+  }
+
+  &__subtitulos {
+    margin: 1.5em 0 0.8em;
+
+    & i {
+      margin-right: 20px;
+    }
+  }
+
+  &__volver {
+    margin-left: 0.8em;
+    border: 1px solid $color-light-mid;
+    border-radius: 1em;
+    padding: 0.2em 1em;
+
+    & i {
+      margin-right: 0.8em;
+    }
+
+    &:hover {
+      background-color: $color-light-mid;
+    }
+  }
+}
+
+/**********************************************
+************  Media Queries  ******************
+***********************************************/
+
+/******************************/
+/*********  1000px ************/
+/******************************/
+@media (max-width: 1000px) {
+  .main-ayuda {
+    background-size: cover;
+  }
+
+  .ayuda-container {
+    max-width: 700px;
+    width: 80%;
+  }
+}
+
+/******************************/
+/*********   720px ************/
+/******************************/
+@media (max-width: 720px) {
+  .ayuda-container {
+    max-width: 600px;
+    width: 90%;
+    padding: 30px 20px;
+
+    &__tittle {
+      font-size: 1.5em;
+      padding: 1em;
+    }
+
+    &__parrafo {
+      margin-bottom: 0.5em;
+      text-indent: 1.8em;
+    }
+
+    &__titulos {
+      margin: 0.8em 0;
+
+      & ul li {
+        margin-left: 1.5em;
+      }
+    }
+
+    &__subtitulos {
+      margin: 1em 0 0.8em;
+
+      & i {
+        margin-right: 20px;
+      }
+    }
+  }
+}
+
+/******************************/
+/*********   300px ************/
+/******************************/
+@media (max-width: 300px) {
+  .ayuda-container {
+    max-width: 280px;
+    width: 100%;
+    padding: 15px 10px;
+
+    &__tittle {
+      font-size: 1.2em;
+      padding: 0.5em;
+    }
+
+    &__parrafo {
+      margin-bottom: 0.5em;
+      text-indent: 1.8em;
+      font-size: 0.8em;
+    }
+
+    &__subtitulos {
+      font-size: 1em;
+      margin: 1em 0 0.8em;
+    }
+  }
+}

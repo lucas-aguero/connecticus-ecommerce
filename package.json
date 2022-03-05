@@ -1,0 +1,30 @@
+{
+  "type": "module",
+  "name": "Connecticus",
+  "version": "0.0.1",
+  "description": "Connecticus - Proyecto Final Educacion IT",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js",
+    "dev": "export NODE_ENV=development && nodemon server.js",
+    "prod": "export NODE_ENV=production && node server.js"
+  },
+  "engines": {
+    "node": "14.x"
+  },
+  "keywords": [],
+  "author": "DS",
+  "license": "MIT",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^15.0.0",
+    "express": "^4.17.2",
+    "joi": "^17.6.0",
+    "mercadopago": "^1.5.12",
+    "mongoose": "^6.1.7",
+    "morgan": "^1.10.0",
+    "multer": "^1.4.4",
+    "nodemon": "^2.0.15"
+  }
+}

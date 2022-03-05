@@ -1,0 +1,359 @@
+.main-alta {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-image: url("../../img/bkg/fondo-altas.jpg");
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+
+  height: 100%;
+  width: 100%;
+
+  color: $color-light-low;
+}
+
+.alta-container {
+  background-color: $color-dark-hig-transparent;
+  min-width: 250px;
+  max-width: 900px;
+  width: 80%;
+  padding: 50px 30px;
+  border-radius: 2em;
+  margin-bottom: 1em;
+
+  &__tittle {
+    color: $color-light-mid;
+    text-align: center;
+    margin-bottom: 50px;
+    font-size: 2em;
+    font-weight: bold;
+  }
+
+  &__form__input {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15px;
+
+    div {
+      border: 1px solid red;
+      border-radius: 1em;
+      margin: 2px 0 10px 0;
+      height: 2em;
+      background-color: yellow;
+      display: none;
+    }
+
+    & label {
+      color: $color-light-low;
+      font-size: 1.5em;
+      margin-bottom: 5px;
+    }
+
+    & input {
+      background: $color-dark-low-transparent;
+      border-radius: 0.3em;
+      border: none;
+      border-bottom: 1px solid $color-light-low;
+      outline: none;
+      padding: 0.5em;
+      color: $color-light-low;
+      font-size: 1.5em;
+
+      &::selection {
+        background-color: $color-light-mid;
+        color: $color-light-low;
+      }
+    }
+
+    &__envio-gratis {
+      display: flex;
+      flex-direction: row-reverse;
+      justify-content: center;
+
+      & input {
+        margin-right: 1em;
+      }
+    }
+
+    &__select {
+      border-radius: 0.3em;
+      border: none;
+      outline: none;
+      background-color: $color-dark-hig-transparent;
+      width: 100%;
+      resize: vertical;
+      padding: 0.8em;
+      font-size: 1em;
+      color: $color-light-low;
+    }
+
+    &__textarea {
+      border-radius: 0.3em;
+      border-bottom: 1px solid $color-light-low;
+      border: none;
+      outline: none;
+      background-color: $color-dark-hig-transparent;
+      width: 100%;
+      resize: vertical;
+      color: $color-light-low;
+      padding: 0.5em;
+      font-size: 1.5em;
+    }
+
+    &__file {
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 15px;
+
+      & label {
+        color: $color-light-low;
+        font-size: 1.5em;
+        margin-bottom: 5px;
+      }
+
+      & input {
+        background: $color-dark-low-transparent;
+        border-radius: 0.3em;
+        border: none;
+        border-bottom: 1px solid $color-light-low;
+        outline: none;
+        padding: 0.5em;
+        color: $color-light-low;
+        font-size: 1.3em;
+
+        &::selection {
+          background-color: $color-light-mid;
+          color: $color-light-low;
+        }
+      }
+    }
+  }
+
+  &__form__buttons {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    &__button {
+      outline: none;
+      font-weight: bold;
+      padding: 0.5em 1em;
+      border-radius: 1em;
+      background-color: $color-light-mid;
+      color: $color-dark-mid;
+      cursor: pointer;
+      width: 75%;
+      margin-bottom: 1em;
+
+      &:focus {
+        outline: 1px solid $color-dark-low;
+      }
+
+      &:hover {
+        background-color: $color-dark-mid;
+        color: $color-light-low;
+      }
+      
+      &__disabled {
+        background-color: $color-light-low;
+        &:hover {
+          background-color: $color-light-low;
+          color: $color-light-mid;
+
+        }
+      }
+    }
+  }
+}
+
+
+.product-list-container {
+  background-color: $color-dark-hig-transparent;
+  min-width: 250px;
+  max-width: 900px;
+  width: 80%;
+  padding: 10px 30px;
+  border-radius: 2em;
+  margin-bottom: 1em;
+
+  h3 {
+    font-size: 2em;
+    text-align: center;
+
+  }
+}
+
+
+#drop-area {
+  border: 2px dashed #ccc;
+  border-radius: 20px;
+  width: 100%;
+  margin: 25px 0;
+  padding: 20px;
+}
+
+#foto {
+  display: none;
+}
+
+.button {
+  display: inline-block;
+  padding: 10px;
+  background: #ccc;
+  cursor: pointer;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+#drop-area.highlight {
+  border-color: purple;
+}
+
+#gallery img {
+  width: 100px;
+  margin-bottom: 10px;
+  margin-right: 10px;
+  vertical-align: middle;
+}
+
+
+
+/**********************************************
+************  Media Queries  ******************
+***********************************************/
+
+/******************************/
+/*********  1000px ************/
+/******************************/
+@media (max-width: 1000px) {
+  .main-alta {
+    background-size: cover;
+  }
+
+  .alta-container {
+    max-width: 700px;
+    width: 80%;
+  }
+}
+
+/******************************/
+/*********   720px ************/
+/******************************/
+@media (max-width: 720px) {
+  .alta-container {
+    max-width: 600px;
+    width: 90%;
+
+    &__tittle {
+      margin-bottom: 30px;
+      font-size: 1.5em;
+    }
+
+    &__form__input {
+      margin-bottom: 10px;
+
+      & label {
+        font-size: 1em;
+        margin-bottom: 3px;
+      }
+
+      & input {
+        padding: 0.3em;
+        font-size: 1.2em;
+      }
+
+      &__select {
+        padding: 0.8em;
+        font-size: 1em;
+      }
+
+      &__textarea {
+        padding: 0.5em;
+        font-size: 1.5em;
+      }
+
+      &__file {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 10px;
+
+        & label {
+          color: $color-light-low;
+          font-size: 1.5em;
+          margin-bottom: 3px;
+        }
+
+        & input {
+          padding: 0.3em;
+          font-size: 0.8em;
+        }
+      }
+    }
+
+    &__form__buttons {
+      &__button {
+        width: 50%;
+        margin-bottom: 1em;
+      }
+    }
+  }
+}
+
+/******************************/
+/*********   300px ************/
+/******************************/
+@media (max-width: 300px) {
+  .alta-container {
+    max-width: 300px;
+    width: 95%;
+
+    &__tittle {
+      margin-bottom: 10px;
+      font-size: 1.2em;
+    }
+
+    &__form__input {
+      margin-bottom: 5px;
+
+      & label {
+        font-size: 0.8em;
+      }
+
+      & input {
+        font-size: 0.8em;
+      }
+
+      &__select {
+        font-size: 0.8em;
+      }
+
+      &__textarea {
+        font-size: 0.8em;
+      }
+
+      &__file {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 10px;
+
+        & label {
+          color: $color-light-low;
+          font-size: 0.8em;
+          margin-bottom: 3px;
+        }
+
+        & input {
+          padding: 0.2em;
+          font-size: 0.8em;
+        }
+      }
+    }
+  }
+}
+
+
+

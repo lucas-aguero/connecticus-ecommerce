@@ -1,0 +1,80 @@
+<div class="main-alta">
+    <div class="alta-container">
+        <h3 class="alta-container__tittle">Alta Producto</h3>
+        <form class="alta-container__form" autocomplete="off">
+            <div class="alta-container__form__input">
+                <label for="producto-nombre">Producto</label>
+                <input id="producto-nombre" type="text" name="producto-nombre" required>
+                <div class="alta-container__form__input__error"></div>
+            </div>
+            <div class="alta-container__form__input">
+                <label for="producto-marca">Marca</label>
+                <input id="producto-marca" type="text" name="producto-marca" required>
+                <div class="alta-container__form__input__error"></div>
+            </div>
+            <div class="alta-container__form__input">
+                <label for="producto-precio">Precio</label>
+                <input id="producto-precio" type="number" name="producto-precio" required min="0">
+                <div class="alta-container__form__input__error"></div>
+            </div>
+            <div class="alta-container__form__input">
+                <label for="producto-stock">Stock</label>
+                <input id="producto-stock" type="number" name="producto-stock" required min="0">
+                <div class="alta-container__form__input__error"></div>
+            </div>
+
+            <div class="alta-container__form__input alta-container__form__input__envio-gratis">
+                <label for="producto-envio">Envio Gratis</label>
+                <input id="producto-envio" type="checkbox" name="producto-envio">
+            </div>
+            <div class="alta-container__form__input">
+                <label for="producto-categoria">Categoria</label>
+                <select id="producto-categoria" class="alta-container__form__input__select" name="producto-categoria">
+                    <option value="">Selecciones una Opción</option>
+                    <option value="1">Audio</option>
+                    <option value="2">Camaras</option>
+                    <option value="3">Celulares</option>
+                    <option value="4">Gadgets</option>
+                    <option value="5">TV</option>
+                </select>
+            </div>
+            <div class="alta-container__form__input">
+                <label for="producto-detalles">Detalles</label>
+                <textarea id="producto-detalles" class="alta-container__form__input__textarea" name="producto-detalles"
+                    cols="30" rows="10"></textarea>
+                <div class="alta-container__form__input__error"></div>
+            </div>
+            <!-- <div class="alta-container__form__input__file">
+                <label for="producto-foto">Foto</label>
+                <input id="producto-foto" type="text" name="producto-foto">
+                <div class="alta-container__form__input__error"></div>
+            </div> -->
+
+            <div id="drop-area">
+                <p>Subir imágen al servidor con <b>file dialog</b> ó con <b>Drag and Drop</b> dentro del área punteada
+                </p>
+                <br>
+
+                <input id="foto" type="file" accept="image/*" onchange="formAddNewProduct.handleFiles(this.files)">
+                <label class="button" for="foto">file dialog</label>
+                <br><br>
+
+                <progress id="progress-bar" max="100" value="0"></progress>
+                <div id="gallery"><img src="" alt=""></div>
+            </div>
+
+            <div class="alta-container__form__buttons">
+                <button type="submit" class="alta-container__form__buttons__button" id="button-add">Agregar</button>
+                <button type="reset" class="alta-container__form__buttons__button"
+                    id="button-reset">Restablecer</button>
+            </div>
+        </form>
+    </div>
+
+    <div class="product-list-container">
+        <h3>Listado de producto</h3>
+        <div id="product-list-container__list"></div>
+
+    </div>
+
+</div>

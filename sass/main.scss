@@ -1,0 +1,20 @@
+@import "abstracts/variables";
+
+@import "base/reset";
+@import "base/typography";
+@import "base/utilities";
+
+@import "components/card";
+@import "components/auto-slider";
+@import "components/cart";
+@import "components/favourites";
+@import "components/index";
+
+@import "layout/header";
+@import "layout/main-main";
+@import "layout/main-alta";
+@import "layout/main-login";
+@import "layout/main-contacto";
+@import "layout/main-sucursal";
+@import "layout/main-ayuda";
+@import "layout/footer";
