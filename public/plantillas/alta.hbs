@@ -1,8 +1,3 @@
-{{!-- {{#if validos}}
-    <td>Datos Válidos</td>
-{{else}}
-    <td>Datos NO Válidos</td>
-{{/if}} --}}
 {{#if productos.length }}
     <table>
         <tr>
@@ -22,28 +17,31 @@
                 <td>{{marca}}</td>
                 <td>{{precio}}</td>
                 <td>{{stock}}</td>
-        {{#if envio}}
-          <td>Si</td>
-        {{else}}
-          <td>No</td>
-        {{/if}}
-        <td>
-          {{#switch categoria}}
-            {{#case "1"}} Audio {{/case}}
-            {{#case "2"}} Camaras {{/case}}
-            {{#case "3"}} Celulares {{/case}}
-            {{#case "4"}} Gadgets {{/case}}
-            {{#case "5"}} TV {{/case}}
-          {{/switch}}
-        </td>                <td>{{detalles}}</td>
+                {{#if envio}}
+                    <td>Si</td>
+                {{else}}
+                    <td>No</td>
+                {{/if}}
+                <td>
+                {{#switch categoria}}
+                    {{#case "1"}} Audio {{/case}}
+                    {{#case "2"}} Camaras {{/case}}
+                    {{#case "3"}} Celulares {{/case}}
+                    {{#case "4"}} Gadgets {{/case}}
+                    {{#case "5"}} TV {{/case}}
+                {{/switch}}
+                </td>                
+                <td>
+                    {{detalles}}
+                </td>
                 <td>
                     <img style="display:block; margin: 0 auto;" src="{{foto}}" width="50" alt="{{nombre}}"> 
                 </td>
                 <td>
                     {{#if ../validos}}
-                        <button onclick="productController.actualizarProducto('{{id}}')">Actualizar</button>
+                        <button onclick="productController.productUpdate('{{id}}')">Actualizar</button>
                     {{else}}
-                        <button disabled onclick="productController.actualizarProducto('{{id}}')">Actualizar</button>
+                        <button disabled onclick="productController.productUpdate('{{id}}')">Actualizar</button>
                     {{/if}}
                     <button onclick="productController.productDelete('{{id}}')">Borrar</button>
                 </td>

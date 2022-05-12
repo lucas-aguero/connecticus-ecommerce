@@ -1,3 +1,3 @@
-function initContacto() {
-    console.warn('initContacto()')
+async function initContacto() {
+    
 }

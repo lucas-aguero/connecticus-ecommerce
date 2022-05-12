@@ -21,7 +21,7 @@ class FormAddNew {
   imagenSubida = "";
   /* ---------------------------------------------- */
 
-  constructor(addTableRender, guardarProducto) {
+  constructor(addTableRender, productSave) {
     this.inputsConValidacion = document.querySelectorAll("main form input");
     this.inputsSinValidacion = document.querySelectorAll(
       "main form select, main form textarea"
@@ -54,7 +54,7 @@ class FormAddNew {
 
       this.formClean();
 
-      if (guardarProducto) guardarProducto(producto);
+      if (productSave) productSave(producto);
     });
 
     /* -------------  drag and drop  -----------------*/
@@ -226,10 +226,7 @@ function addTableRender(validos, productos) {
 let formAddNewProduct = null;
 
 async function initAlta() {
-  formAddNewProduct = new FormAddNew(
-    addTableRender,
-    productController.guardarProducto
-  );
+  formAddNewProduct = new FormAddNew(addTableRender,productController.productSave);
 
   let productos = await productController.productGetAll();
   addTableRender(null, productos);

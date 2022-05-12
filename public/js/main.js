@@ -24,9 +24,9 @@ class Main {
     } else if (id == "inicio") {
       initInicio();
     } else if (id == "nosotros") {
-      // initNosotros();
+      initNosotros();
     } else if (id == "contacto") {
-      // initContacto();
+      initContacto();
     }
   }
 

@@ -1,3 +1,0 @@
-class FavoriteModel {
-  favorito = [];
-}

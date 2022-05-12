@@ -6,7 +6,7 @@ import ProductosValidation from "../model/validaciones/productos.js";
 const model = ProductModel.get(config.TIPO_DE_PERSISTENCIA);
 
 const productGetAll = async () => {
-  let productos = await model.productReadAll;
+  let productos = await model.productReadAll();
   return productos;
 };
 
@@ -27,7 +27,7 @@ const productSave = async (producto) => {
   }
 };
 
-const productUpdate = async (id, producto) => {
+const productUpdate = async (id,producto) => {
   const errorValidacion = ProductosValidation.validar(producto);
   if (!errorValidacion) {
     let productoUpdate = await model.productUpdate(id, producto);

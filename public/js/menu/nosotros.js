@@ -1,3 +1,3 @@
-function initNosotros() {
-    console.warn('initNosotros()')
+async function initNosotros() {
+    
 }
