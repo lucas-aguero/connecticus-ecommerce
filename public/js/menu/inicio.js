@@ -12,17 +12,14 @@ async function templateListRender(listado) {
 
 function addToCart(e, id, ref) {
   e.preventDefault();
-  let product = productController.productos.find(
-    (producto) => producto.id == id
-  );
+  let product = productController.productos.find(producto => producto.id == id );
+  console.log(product)
   cartController.cartProductAdd(product);
 }
 
 function addToFavourites(e, id, ref) {
   e.preventDefault();
-  let product = productController.productos.find(
-    (producto) => producto.id == id
-  );
+  let product = productController.productos.find(producto => producto.id == id );
   favouriteController.favouritesProductAdd(product);
 }
 

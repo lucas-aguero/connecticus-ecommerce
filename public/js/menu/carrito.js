@@ -4,7 +4,6 @@ async function cartRenderTable(carrito) {
   var cartSectionElement = document.getElementsByClassName("container-cart")[0];
 
   let plantillaHbs = await fetch("plantillas/cart.hbs").then((r) => r.text());
-
   var template = Handlebars.compile(plantillaHbs);
   let html = template({ carrito });
   cartSectionElement.innerHTML = html;
@@ -22,7 +21,7 @@ function startCart() {
         containerFavsElem.classList.remove("container-favourites--open");
 
         if (cartShown) {
-            await cartRenderTable(cartController.carrito);
+            await cartRenderTable(cartController.cart);
         } else {
             cartSectionElement.classList.remove("container-cart--open");
         }

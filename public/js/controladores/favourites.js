@@ -38,9 +38,7 @@ class FavouriteController extends FavoriteModel {
   }
 
   async favouritesSend() {
-    var elemSectionFavourites = document.getElementsByClassName(
-      "container-favourites"
-    )[0];
+    var elemSectionFavourites = document.getElementsByClassName("container-favourites")[0];
 
     elemSectionFavourites.innerHTML = "<h2>Enviando Favoritos...</h2>";
     await favouritesService.favouritesServiceSave(this.favorito);
@@ -53,7 +51,7 @@ class FavouriteController extends FavoriteModel {
     setTimeout(() => {
       elemSectionFavourites.classList.remove("container-favourites--open");
       favShown = false;
-    }, 1500);
+    }, 150);
   }
 }
 

@@ -38,9 +38,8 @@ class CartController extends CartModel {
   }
 
   async cartSend() {
-    var cartSectionElement =
-      document.getElementsByClassName("container-cart")[0];
-
+    var cartSectionElement = document.getElementsByClassName("container-cart")[0];
+    
     cartSectionElement.innerHTML = "<h2>Enviando...</h2>";
     await cartService.cartServiceSave(this.cart);
     this.cart = [];
@@ -51,7 +50,7 @@ class CartController extends CartModel {
     setTimeout(() => {
       cartSectionElement.classList.remove("container-cart--open");
       cartShown = false;
-    }, 1500);
+    }, 150);
   }
 }
 

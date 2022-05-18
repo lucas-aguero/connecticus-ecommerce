@@ -16,5 +16,5 @@ const postCart = async (req, res) => {
 };
 
 export default {
-  postCart,
+  postCart
 };

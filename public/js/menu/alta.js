@@ -23,16 +23,12 @@ class FormAddNew {
 
   constructor(addTableRender, productSave) {
     this.inputsConValidacion = document.querySelectorAll("main form input");
-    this.inputsSinValidacion = document.querySelectorAll(
-      "main form select, main form textarea"
-    );
+    this.inputsSinValidacion = document.querySelectorAll("main form select, main form textarea");
     this.form = document.querySelector(".alta-container__form");
     this.button = document.getElementById("button-add");
 
     this.button.disabled = true;
-    this.button.classList.add(
-      "alta-container__form__buttons__button__disabled"
-    );
+    this.button.classList.add("alta-container__form__buttons__button__disabled");
 
     this.inputsConValidacion.forEach((input, index) => {
       if (input.type != "checkbox" && input.type != "file") {
@@ -106,17 +102,13 @@ class FormAddNew {
       this.setCustomValidityJS("Este campo no es válido", index);
       this.camposValidos[index] = false;
       this.button.disabled = true;
-      this.button.classList.add(
-        "alta-container__form__buttons__button__disabled"
-      );
+      this.button.classList.add("alta-container__form__buttons__button__disabled");
       return null;
     }
 
     this.camposValidos[index] = true;
     this.button.disabled = this.algunCampoNoValido();
-    this.button.classList.remove(
-      "alta-container__form__buttons__button__disabled"
-    );
+    this.button.classList.remove("alta-container__form__buttons__button__disabled");
 
     this.setCustomValidityJS("", index);
     return valor;

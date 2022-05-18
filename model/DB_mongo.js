@@ -23,7 +23,8 @@ class Mongo_DB {
           useNewUrlParser: true,
           useUnifiedTopology: true,
         });
-        console.log("Base de Datos: Ok, conectada!");
+        console.log("DATABASE                : Ok, conectada!");
+        console.log("----------------------------------------");
         Mongo_DB.conexionOk = true;
       }
     } catch (error) {
