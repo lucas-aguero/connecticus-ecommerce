@@ -32,10 +32,7 @@ class FormAddNew {
         input.addEventListener("input", () => {
           this.validar(input.value, this.regExpValidar[index], index);
           if (addTableRender)
-            addTableRender(
-              !this.algunCampoNoValido(),
-              productController.productos
-            );
+            addTableRender(!this.algunCampoNoValido(),productController.productos);
         });
       }
     });
@@ -120,7 +117,7 @@ class FormAddNew {
       envio: this.inputsConValidacion[4].checked,
       categoria: this.inputsSinValidacion[0].value,
       detalles: this.inputsSinValidacion[1].value,
-      foto: this.inputsConValidacion[5].value,
+      foto: this.imagenSubida? `/uploads/${this.imagenSubida}`:'',
     };
   }
 
@@ -184,6 +181,7 @@ class FormAddNew {
     xhr.addEventListener("load", () => {
       if (xhr.status == 200) {
         this.imagenSubida = JSON.parse(xhr.response).nombre;
+        console.log(this.imagenSubida);
       }
     });
 
