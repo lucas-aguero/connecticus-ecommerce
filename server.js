@@ -33,7 +33,6 @@ console.log("----------------------------------------");
 
 process.on("SIGINT", () => {
   console.log("Control-C detectado!");
-
   process.exit(0);
 });
 

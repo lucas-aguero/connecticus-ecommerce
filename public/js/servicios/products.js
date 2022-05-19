@@ -1,9 +1,7 @@
 const productionProduct = location.port != "5500";
 
 class ProductService {
-  URL_PRODUCTOS = productionProduct
-    ? "/api/productos/"
-    : "http://localhost:9090/api/productos/";
+  URL_PRODUCTOS = productionProduct ? "/api/productos/" : "http://localhost:9090/api/productos/";
 
   async productServiceGetAll() {
     let productos = await http.get(this.URL_PRODUCTOS);
