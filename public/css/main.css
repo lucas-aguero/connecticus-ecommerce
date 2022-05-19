@@ -855,6 +855,51 @@ QUICK LINKS Container
     font-size: 2em;
   }
 }
+.main-footer {
+  display: flex;
+  flex-direction: column;
+  background-color: #ff7e55;
+  color: #eee;
+  border-radius: 2em;
+  padding: 0.5em;
+  height: 150px;
+}
+.main-footer__social-networks {
+  display: flex;
+  flex-direction: row;
+  height: 50%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  font-size: 2.5em;
+  align-items: center;
+}
+.main-footer__links {
+  display: flex;
+  flex-direction: row;
+  height: 50%;
+  justify-content: space-evenly;
+}
+.main-footer__links__link:hover {
+  border: 1px solid #46515e;
+  border-radius: 1em;
+  padding: 0.5em 1.2em;
+  background-color: #46515e;
+}
+.main-footer__links__link__text {
+  padding-left: 0.4em;
+  display: none;
+}
+.main-footer__links__link__link {
+  display: flex;
+  height: 100%;
+  width: 100%;
+  color: #ff7e55;
+  text-decoration: none;
+  align-items: center;
+  justify-content: center;
+}
+
 .main-main {
   display: flex;
   flex-direction: column;
@@ -869,7 +914,7 @@ QUICK LINKS Container
 .section-productos__filtros {
   height: 100%;
   width: 300px;
-  background-color: #ff7d5523;
+  background-color: rgba(255, 125, 85, 0.137254902);
   border-radius: 1em;
   font-size: 1em;
   padding-bottom: 1em;
@@ -989,7 +1034,7 @@ QUICK LINKS Container
 }
 
 .alta-container {
-  background-color: #1a1f2483;
+  background-color: rgba(26, 31, 36, 0.5137254902);
   min-width: 250px;
   max-width: 900px;
   width: 80%;
@@ -1023,7 +1068,7 @@ QUICK LINKS Container
   margin-bottom: 5px;
 }
 .alta-container__form__input input {
-  background: #46515ea4;
+  background: rgba(70, 81, 94, 0.6431372549);
   border-radius: 0.3em;
   border: none;
   border-bottom: 1px solid #eee;
@@ -1048,7 +1093,7 @@ QUICK LINKS Container
   border-radius: 0.3em;
   border: none;
   outline: none;
-  background-color: #1a1f2483;
+  background-color: rgba(26, 31, 36, 0.5137254902);
   width: 100%;
   resize: vertical;
   padding: 0.8em;
@@ -1060,7 +1105,7 @@ QUICK LINKS Container
   border-bottom: 1px solid #eee;
   border: none;
   outline: none;
-  background-color: #1a1f2483;
+  background-color: rgba(26, 31, 36, 0.5137254902);
   width: 100%;
   resize: vertical;
   color: #eee;
@@ -1078,7 +1123,7 @@ QUICK LINKS Container
   margin-bottom: 5px;
 }
 .alta-container__form__input__file input {
-  background: #46515ea4;
+  background: rgba(70, 81, 94, 0.6431372549);
   border-radius: 0.3em;
   border: none;
   border-bottom: 1px solid #eee;
@@ -1124,7 +1169,7 @@ QUICK LINKS Container
 }
 
 .product-list-container {
-  background-color: #1a1f2483;
+  background-color: rgba(26, 31, 36, 0.5137254902);
   min-width: 250px;
   max-width: 900px;
   width: 80%;
@@ -1292,7 +1337,7 @@ QUICK LINKS Container
 }
 
 .login-container {
-  background-color: #1a1f2483;
+  background-color: rgba(26, 31, 36, 0.5137254902);
   min-width: 250px;
   max-width: 900px;
   width: 80%;
@@ -1317,7 +1362,7 @@ QUICK LINKS Container
   margin-bottom: 5px;
 }
 .login-container__form__input input {
-  background: #46515ea4;
+  background: rgba(70, 81, 94, 0.6431372549);
   border-radius: 0.3em;
   border: none;
   border-bottom: 1px solid #eee;
@@ -1436,7 +1481,7 @@ QUICK LINKS Container
 }
 
 .contacto-container {
-  background-color: #1a1f2483;
+  background-color: rgba(26, 31, 36, 0.5137254902);
   min-width: 250px;
   max-width: 900px;
   width: 80%;
@@ -1461,7 +1506,7 @@ QUICK LINKS Container
   margin-bottom: 5px;
 }
 .contacto-container__form__input input {
-  background: #46515ea4;
+  background: rgba(70, 81, 94, 0.6431372549);
   border-radius: 0.3em;
   border: none;
   border-bottom: 1px solid #eee;
@@ -1479,7 +1524,7 @@ QUICK LINKS Container
   border-bottom: 1px solid #eee;
   border: none;
   outline: none;
-  background-color: #1a1f2483;
+  background-color: rgba(26, 31, 36, 0.5137254902);
   width: 100%;
   resize: vertical;
   color: #eee;
@@ -1603,7 +1648,7 @@ QUICK LINKS Container
 .sucursal-container {
   display: flex;
   flex-direction: column;
-  background-color: #1a1f2483;
+  background-color: rgba(26, 31, 36, 0.5137254902);
   min-width: 200px;
   max-width: 400px;
   width: 50%;
@@ -1722,7 +1767,7 @@ QUICK LINKS Container
 }
 
 .ayuda-container {
-  background-color: #1a1f2483;
+  background-color: rgba(26, 31, 36, 0.5137254902);
   min-width: 250px;
   max-width: 900px;
   width: 80%;
@@ -1843,49 +1888,4 @@ QUICK LINKS Container
     font-size: 1em;
     margin: 1em 0 0.8em;
   }
-}
-.main-footer {
-  display: flex;
-  flex-direction: column;
-  background-color: #46515e;
-  color: #eee;
-  border-radius: 2em;
-  padding: 0.5em;
-  height: 150px;
-}
-.main-footer__social-networks {
-  border: 1px solid red;
-  display: flex;
-  flex-direction: row;
-  height: 50%;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-evenly;
-  font-size: 2.5em;
-  align-items: center;
-}
-.main-footer__links {
-  border: 1px solid red;
-  display: flex;
-  flex-direction: row;
-  height: 50%;
-  justify-content: space-evenly;
-}
-.main-footer__links__link:hover {
-  border: 1px solid #46515e;
-  border-radius: 1em;
-  padding: 0.5em 1.2em;
-  background-color: #46515e;
-}
-.main-footer__links__link__text {
-  padding-left: 0.4em;
-}
-.main-footer__links__link__link {
-  display: flex;
-  height: 100%;
-  width: 100%;
-  color: #ff7e55;
-  text-decoration: none;
-  align-items: center;
-  justify-content: center;
 }

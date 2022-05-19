@@ -10,9 +10,6 @@ class FormAddNew {
     /^.+$/, // regexp marca
     /^[0-9-]+$/, // regexp precio
     /^[0-9-]+$/, // regexp stock
-    // /^[0-9-]+$/, // regexp categoria
-    // /^.+$/, // regexp detalle
-    // /^.+$/, // regexp foto
   ];
 
   /* -------------  drag and drop  -----------------*/

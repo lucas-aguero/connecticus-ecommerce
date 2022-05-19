@@ -1,14 +1,13 @@
 .main-footer {
   display: flex;
   flex-direction: column;
-  background-color: $color-dark-low;
+  background-color: $color-light-mid;
   color: $color-light-low;
   border-radius: 2em;
   padding: 0.5em;
   height: 150px;
 
   &__social-networks {
-    border: 1px solid red;
     display: flex;
     flex-direction: row;
     height: 50%;
@@ -17,16 +16,13 @@
     justify-content: space-evenly;
     font-size: 2.5em;
     align-items: center;
-    
   }
   
   &__links {
-    border: 1px solid red;
     display: flex;
     flex-direction: row;
     height: 50%;
     justify-content: space-evenly;
-    
     
     &__link {
       &:hover {
@@ -38,6 +34,7 @@
 
       &__text {
         padding-left: 0.4em;
+        display: none;
       }
 
       &__link {
