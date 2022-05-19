@@ -181,7 +181,6 @@ class FormAddNew {
     xhr.addEventListener("load", () => {
       if (xhr.status == 200) {
         this.imagenSubida = JSON.parse(xhr.response).nombre;
-        console.log(this.imagenSubida);
       }
     });
 
