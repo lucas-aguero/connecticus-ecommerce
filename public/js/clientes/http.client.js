@@ -6,7 +6,7 @@ class Http {
             return await fetch(url + (id || ''), { method: 'get' }).then(r => r.json())
         }
         catch (error) {
-            console.error('ERROR GET', error)
+            console.error('ERROR GET', error);
         }
     }
 
@@ -21,7 +21,7 @@ class Http {
             }).then(r => r.json())
         }
         catch (error) {
-            console.error('ERROR POST', error)
+            console.error('ERROR POST', error);
         }
     }
 
