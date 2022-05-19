@@ -6,7 +6,7 @@
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js",
+    "start": "export NODE_ENV=production && node server.js",
     "dev": "export NODE_ENV=development && nodemon server.js",
     "prod": "export NODE_ENV=production && node server.js"
   },
